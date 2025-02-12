@@ -1,5 +1,5 @@
 class SuperClass {
-    private int privateVar = 10;
+    private int privateVar = 42;
 
     public int getPrivateVar() {
         return privateVar;
@@ -8,7 +8,6 @@ class SuperClass {
 
 class SubClass extends SuperClass {
     public void display() {
-        // System.out.println(privateVar); // This would cause a compilation error
         System.out.println("Accessing privateVar through getter: " + getPrivateVar());
     }
 }
