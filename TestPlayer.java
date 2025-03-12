@@ -1,31 +1,29 @@
-interface Playable {
-    void play();
-    void pause();
-    void stop();
+abstract class Playable{
+   void play()       //concrete method
+   {
+    System.out.println("Music is playing");
 }
+    abstract void pause();
+    abstract void stop();
 
-class MusicPlayer implements Playable {
-    @Override
-    public void play() {
-        System.out.println("Music is playing...");
-    }
-
-    @Override
-    public void pause() {
-        System.out.println("Music is paused.");
-    }
-
-    @Override
-    public void stop() {
-        System.out.println("Music is stopped.");
-    }
 }
+class MusicPlayer extends Playable{
 
-public class TestPlayer {
+@Override
+public  void pause(){
+    System.out.println("Music is paused....");
+}
+@Override
+public void stop(){
+    System.out.println("Music is paused");
+}
+}
+public class TestPlayer{
     public static void main(String[] args) {
-        MusicPlayer player = new MusicPlayer();
-        player.play();
-        player.pause();
-        player.stop();
+        MusicPlayer obj= new MusicPlayer();
+        obj.play();
+        obj.pause();
+        obj.stop();
+
     }
 }
