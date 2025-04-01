@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Employee {
+ class Employee {
     
     private int employeeID;
     private String name;
@@ -26,6 +26,10 @@ class Employee {
         this.department = department;
         this.salary = salary;
         totalEmployees++;
+    }
+
+    public Employee(int employeeID) {
+        this.employeeID = employeeID;
     }
 
     
@@ -67,7 +71,7 @@ class Employee {
         System.out.println("\nEmployee 3 Info:");
         emp3.displayEmployeeInfo();
 
-       -
+       
         System.out.println("\nSalary of Employee 1: " + emp1.calculateSalary());
         System.out.println("Salary of Employee 2: " + emp2.calculateSalary());
         System.out.println("Salary of Employee 3: " + emp3.calculateSalary());
